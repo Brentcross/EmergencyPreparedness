@@ -33,11 +33,12 @@ export default function HomePage() {
             </article>
           </div>
           <div className="mt-10 rounded-3xl border border-slate-200 bg-white p-6">
-            <h2 className="text-xl font-semibold text-slate-900">How this tool helps</h2>
+            <h2 className="text-xl font-semibold text-slate-900">How this tool works</h2>
             <ul className="mt-4 space-y-3 text-slate-700">
-              <li>• Provides a clear, encouraging readiness score for your home.</li>
-              <li>• Offers local risk guidance for wildfire, flood, winter weather, earthquakes, heat, and hazardous material incidents.</li>
-              <li>• Builds a simple action plan you can use with family and ward support.</li>
+              <li>• Complete both assessments right in your browser—no downloads or registration required.</li>
+              <li>• Get personalized readiness scores and action items for your household.</li>
+              <li>• Your information stays with you; all data is stored locally on your device.</li>
+              <li>• Find local risk guidance for wildfire, flood, winter weather, earthquakes, heat, and hazardous material incidents.</li>
             </ul>
             <p className="mt-6 text-sm leading-6 text-slate-500">
               Disclaimer: This is an educational planning tool and not professional emergency, medical, or insurance advice.

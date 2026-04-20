@@ -6,7 +6,6 @@ import { foodStorageQuestionGroups, defaultFoodStorageInput } from "@/lib/questi
 import { computeFoodStorageScore } from "@/lib/scoring";
 import { ProgressBar } from "@/components/ProgressBar";
 import { ResultSummary } from "@/components/ResultSummary";
-import { ExportButtons } from "@/components/ExportButtons";
 import { FoodStorageInput, FoodStorageResult } from "@/lib/types";
 
 const radios = {
@@ -67,21 +66,11 @@ export default function FoodStorageSurvey() {
             <p className="text-sm uppercase tracking-[0.24em] text-slate-500">Food storage assessment complete</p>
             <h1 className="mt-2 text-3xl font-semibold text-slate-900">Food storage results</h1>
           </div>
-          <div className="flex flex-wrap gap-3">
-            <Link href="/" className="rounded-full bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-800 hover:bg-slate-200">
-              Home
-            </Link>
-            <Link href="/admin" className="rounded-full bg-brand-600 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-700">
-              Ward export info
-            </Link>
-          </div>
+          <Link href="/" className="rounded-full bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-800 hover:bg-slate-200">
+            Back to home
+          </Link>
         </div>
         <ResultSummary title="Food storage" result={result} actionTitle="Action plan" />
-        <ExportButtons
-          filename="food-storage-results"
-          jsonData={{ assessment: "food-storage", result, timestamp: new Date().toISOString() }}
-          printPath="/print/food-storage"
-        />
       </main>
     );
   }
